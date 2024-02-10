@@ -5,7 +5,7 @@ using UnityEngine;
 public class script : MonoBehaviour
 {
     // Start is called before the first frame update
-    public RigidBody2D myRigidBody;
+    //public RigidBody2D myRigidBody;
     void Start()
     {
         
@@ -14,6 +14,6 @@ public class script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myRigidBody.velocity = Vector2.up * 10 ;
+        //myRigidBody.velocity = Vector2.up * 10 ;
     }
 }
