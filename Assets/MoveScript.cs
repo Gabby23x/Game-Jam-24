@@ -15,6 +15,7 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movement
         if(Input.GetKey(KeyCode.RightArrow)) {
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         } else if (Input.GetKey(KeyCode.LeftArrow))
