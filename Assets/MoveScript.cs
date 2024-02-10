@@ -31,4 +31,22 @@ public class MoveScript : MonoBehaviour
         }
 
     }
+
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("House"))
+    //    {
+    //        Debug.Log("House collided with Giant!");
+    //        // Do something specific to the collision between house and giant
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("House collided with Giant!");
+        if (collision.gameObject.name == "House")
+        {
+            Debug.Log("House collided with Giant!");
+        }
+    }
 }
