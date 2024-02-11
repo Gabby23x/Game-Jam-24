@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class HouseScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("House collided with Giant!");
+        if (other.CompareTag("Giant"))
+        {
+            Debug.Log("House collided with Giant!");
+            // Do something specific to the collision between house and giant
+        }
     }
 }

@@ -26,23 +26,25 @@ public class MoveScript : MonoBehaviour
             transform.Translate(Vector2.down * Time.deltaTime * 1.8f);
         }
 
+
     }
 
-    //void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("House"))
-    //    {
-    //        Debug.Log("House collided with Giant!");
-    //        // Do something specific to the collision between house and giant
-    //    }
-    //}
-
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("House collided with Giant!");
-        if (collision.gameObject.name == "House")
+        if (other.CompareTag("House"))
         {
             Debug.Log("House collided with Giant!");
+            // Do something specific to the collision between house and giant
         }
     }
+
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("House collided with Giant!");
+    //    if (collision.gameObject.name == "House")
+    //    {
+    //        Debug.Log("House collided with Giant!");
+    //    }
+    //}
 }
