@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script : MonoBehaviour
+public class CameraScript : MonoBehaviour
 {
+    public Transform player;
     // Start is called before the first frame update
-    //public RigidBody2D myRigidBody;
     void Start()
     {
         
@@ -14,6 +14,8 @@ public class script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //myRigidBody.velocity = Vector2.up * 10 ;
+        if (player != null){
+            transform.position = new Vector3(player.position.x+5.5f, player.position.y+1.5f, transform.position.z);
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
-    public float moveSpeed = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -17,17 +16,14 @@ public class MoveScript : MonoBehaviour
     {
         //Movement
         if(Input.GetKey(KeyCode.RightArrow)) {
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.right * Time.deltaTime * 1.8f);
         } else if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.up * Time.deltaTime * 1.8f);
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector2.down * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.down * Time.deltaTime * 1.8f);
         }
 
     }
